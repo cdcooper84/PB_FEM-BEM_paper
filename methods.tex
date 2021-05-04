@@ -1,0 +1,48 @@
+\subsection*{\sffamily \large The implicit solvent model}
+
+The implicit solvent model can be described mathematically as a coupled system of partial differential equations, where the Poisson-Boltzmann governs in the solvent region ($\Omega_X$ in Figure XX), and the Poisson equation in the solute region ($\Omega_Y$ in Figure XX). These regions are interfaced by the molecular surface ($\Gamma$), where the potential ($\phi$) and electric displacement ($\epsilon\partial\phi/\partial\mathbf{n}$) are continuous. 
+%
+\begin{align}\label{eq:pbe}
+\nabla^2\phi_1(\mathbf{x}) &= \frac{1}{\epsilon}\sum_{k=1}^{N_q} q_k\delta(\mathbf{x},\mathbf{x}_k) \quad  \mathbf{x} \in \Omega_1\nonumber\\
+\left(\nabla^2 - \kappa^2\right)\phi_2 &= 0 \quad\mathbf{x}\in\Omega_2\nonumber\\
+\phi_1 = \phi_2 &\quad \epsilon_1\frac{\partial\phi_1}{\partial\mathbf{n}} = \epsilon_2\frac{\partial\phi_2}{\partial\mathbf{n}} \quad \mathbf{x}\in \Gamma. 
+\end{align}
+%
+where $\epsilon_1$ and $\epsilon_2$ are the dielectric constants in the solute and solvent, respectively, $\kappa$ is the inverse of the Debye length, related with the salt concentration, and $q_k$ are the values of the partial charges, located at $\mathbf{x}_k$.
+
+The electrostatic potential in $\Omega_1$ can be further decomposed into singular and regular components as $\phi_1 = \phi_c + \phi_R$, where $\phi_c$ is the solution to
+%
+\begin{align}\label{eq:phic}
+\nabla^2\phi_c(\mathbf{x}) &= \frac{1}{\epsilon_1}\sum_{k=1}^{N_q}q_k\delta(\mathbf{x},\mathbf{x}_k) \quad \mathbf{x}\in\Omega_1\cup\Omega_2\nonumber\\
+\phi_c(\mathbf{x})&=0 \quad \text{ as } |\mathbf{x}|\to\infty
+\end{align}
+
+Physically, $\phi_c$ can be interpreted as the Coulomb-type potential from the point charges, whereas $\phi_R$, also known as reaction potential, is originated by the polarization of the solvent. 
+Usually, $\epsilon_1$ is considered a constant value, yielding an analytical expression for $\phi_c$. 
+However, the molecule permittivity may vary in space, in which case we need to solve Equation \eqref{eq:phic} numerically.
+
+There are regularized versions of Equation \eqref{eq:pbe} [HolstETal2008,GengZhao2020] which are widely used to numerically solve the Poisson-Boltzmann equation with finite element or finite difference methods.
+However, here we use the standard formulation in Equation \eqref{eq:pbe}, as it offers more flexibility when dealing with, for example, variable permitivitties.
+
+A common quantity of interest in implicit solvent models is the solvation free energy, which the change in Gibbs free energy as the molecule moves from vacuum into the solvent. Considering the charge distribution $\rho$ consists of point charges, this can be calculated as
+%
+\begin{equation}\label{eq:dG}
+\Delta G_{solv} = \frac{1}{2}\int_{\Omega_1} \rho(\mathbf{x})\phi_{r}(\mathbf{x}) = \frac{1}{2}\sum_{k=1}^{N_q} q_k\phi_r(\mathbf{x_k})
+\end{equation}
+
+\subsection*{\sffamily \large Numerical solution of the Poisson-Boltzmann equation}
+
+\subsection*{\sffamily \large BEM-BEM coupling}
+
+\subsection*{\sffamily \large FEM-BEM coupling}
+
+
+
+
+\begin{itemize}
+    \item Implicit solvent model and Poisson-Boltzmann 
+    \item Regularized PB (3-term splitting)
+    \item Description with constant and variable permittivity 
+    \item Standard BEM-BEM and FEM-BEM coupling approach
+    \item Hybrid FEM-BEM coupling
+\end{itemize}
