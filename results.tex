@@ -5,19 +5,121 @@
     \item Show convergence to analytical solution for
     \begin{itemize}
         \item BEM-BEM
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{BEM_BEM_Sphere_const_coeff_error.png}
+  \caption{Error}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{BEM_BEM_Sphere_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{BEM_BEM_Sphere_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
         \item Standard FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{FEM_BEM_Sphere_const_coeff_error.png}
+  \caption{Error}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{FEM_BEM_Sphere_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{FEM_BEM_Sphere_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
         \item Hybrid FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Sphere_const_coeff_error.png}
+  \caption{Error}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Sphere_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Sphere_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
     \end{itemize}
 \end{itemize}
 
 \subsection*{\sffamily \large Performance for a molecular geometry}
 \begin{itemize}
     \item Use arginine or a small protein (1PGB?)
+    \begin{itemize}
+        \item BEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{BEM_BEM_Arginine_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{BEM_BEM_Arginine_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+        \item Standard FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{FEM_BEM_Arginine_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{FEM_BEM_Arginine_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+        \item Hybrid FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Arginine_const_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Arginine_const_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+    \end{itemize}
     \item Compare computer time and iterations for FEM-BEM with standard and hybrid approaches, without preconditioner. Choose hybrid.
     \item Show performance of hybrid method with preconditioner.
 \end{itemize}
 
 \section*{\sffamily \Large Results with variable permittivity}
+
+    \begin{itemize}
+        \item Standard FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{FEM_BEM_Sphere_varying_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{FEM_BEM_Sphere_varying_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+        \item Hybrid FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Sphere_varying_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Sphere_varying_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+    \end{itemize}
 
 \subsection*{\sffamily \large Validation for a spherical cavity}
 
@@ -28,6 +130,31 @@ Compare solvation energy results of hybrid FEM-BEM with Delphi
     \item Mesh refinement study using hybrid FEM-BEM and Delphi (if possible) on arginine or small protein. Check if they are converging to same result.
     \item Compare timings for equivalent error (if possible)
 \end{itemize}
+
+    \begin{itemize}
+        \item Standard FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{FEM_BEM_Arginine_varying_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{FEM_BEM_Arginine_varying_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+        \item Hybrid FEM-BEM
+\begin{figure}[!htb]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Arginine_varying_coeff_iter.png}
+  \caption{Iterations}
+\endminipage\hfill
+\minipage{0.45\textwidth}%
+  \includegraphics[width=\linewidth]{Hybrid_FEM_BEM_Arginine_varying_coeff_time.png}
+  \caption{Computational time}
+\endminipage
+\end{figure}
+    \end{itemize}
 
 \subsection*{\sffamily \large Performance analysis for larger structures}
 
