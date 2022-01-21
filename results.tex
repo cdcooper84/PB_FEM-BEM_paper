@@ -96,6 +96,37 @@
 
 \section*{\sffamily \Large Results with variable permittivity}
 
+\begin{table}
+\centering
+\begin{tabular}{c|c|c}
+&Mesh size & $\Delta G_{solv}$\\
+&\AA       &  kcal/mol \\
+\hline
+\multirow{3}{*}{APBS}& 0.39$\times$0.39$\times$0.39 & -32.4042\\ 
+&0.26$\times$0.26$\times$0.26 & -32.3375\\ 
+&0.17$\times$0.17$\times$0.17 & -32.3413\\ 
+\hline
+&Mesh dens. & \\
+&vert/\AA$^2$ & \\
+\hline
+%\multirow{5}{*}{Standard FEM-BEM}& 2 & -36.239\\
+    & 2 & -36.239\\
+Standard    & 4  & -33.129 \\
+FEM-BEM    & 8  & -32.674 \\
+    & 12 & -32.648 \\
+    & 16 & -32.293 \\
+\hline
+%\multirow{5}{*}{Standard FEM-BEM}& 2 & -29.554\\
+    & 2 & -29.554\\
+Hybrid    & 4  & -33.766 \\
+FEM-BEM    & 8  & -32.586 \\
+    & 12 & -32.891 \\
+    & 16 & -32.528 \\
+\hline
+\end{tabular}
+\caption{}
+\end{table}
+
     \begin{itemize}
         \item Standard FEM-BEM
 \begin{figure}[!htb]
